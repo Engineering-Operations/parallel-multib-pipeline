@@ -16,7 +16,18 @@ pipeline{
                     sh 'lscpu'
                 }
                 }
+                stage('jenkins-stat'){
+                    steps{
+                        echo 'This is to check the current status of jenkins'
+                        sh 'sudo systemctl status jenkins'
+                    }
+                }
             }
-        } 
+        }
+        stage('code-deploy'){
+            steps{
+                echo 'This is to deploy the code'
+            }
+        }
     }
 }
