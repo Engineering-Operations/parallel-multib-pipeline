@@ -31,6 +31,12 @@ pipeline{
                         sh 'df -h'
                     }
                }
+               stage('disk-usage'){
+                   steps{
+                       echo 'this is to check disk usage'
+                       sh 'du -h'
+                   }
+               }
             }   
         }
         stage('code-deploy'){
