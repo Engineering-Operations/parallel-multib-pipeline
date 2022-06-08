@@ -23,6 +23,15 @@ pipeline{
                     }
                 }
             }
+        stage('parallel-job2'){
+            parallel{
+               stage('mem-stat'){
+                    steps{
+                        echo 'This is to check disk free space'
+                        sh 'df -h'
+                    }
+               }
+            }   
         }
         stage('code-deploy'){
             steps{
