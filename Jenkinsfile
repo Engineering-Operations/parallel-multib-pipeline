@@ -37,6 +37,12 @@ pipeline{
                        sh 'du -h'
                    }
                }
+               stage('check memory free space in megabytes'){
+                   steps{
+                       echo 'this is to check memory free space megabytes'
+                       sh 'free -m'
+                   }
+              }
             }   
         }
         stage('code-deploy'){
@@ -46,3 +52,4 @@ pipeline{
         }
     }
 }
+        
