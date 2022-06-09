@@ -7,7 +7,6 @@ pipeline{
             }
         }
     }
-    stages{
         stage('parallel-job'){
             parallel{
                 stage('syscheck'){
@@ -52,5 +51,5 @@ pipeline{
         }
     }
 }
-}
+
         
