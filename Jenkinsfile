@@ -24,7 +24,7 @@ pipeline{
         }
         stage('parallel-job2'){
             parallel{
-                stage('disk-free'){
+               stage('disk-free'){
                     steps{
                       echo 'This is to check disk free space'
                       sh 'df -h'
@@ -50,5 +50,6 @@ pipeline{
             }
         }
     }
+}
 }
         
