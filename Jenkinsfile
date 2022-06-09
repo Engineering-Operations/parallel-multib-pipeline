@@ -11,7 +11,7 @@ pipeline{
                 stage('syscheck'){
                     steps{
                       echo 'This is to check for operating system statistics'
-                      sh 'lscpu'
+                      sh 'cat /etc/os-release'
                     }
                 }
                 stage('jenkins-stat'){
