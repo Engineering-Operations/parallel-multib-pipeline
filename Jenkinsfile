@@ -10,6 +10,9 @@ pipeline{
             }
         }
         stage('parallel-job'){
+            when{
+                banch 'develop'
+            }
             parallel{
                 stage('syscheck'){
                     steps{
