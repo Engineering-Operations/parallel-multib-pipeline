@@ -49,7 +49,7 @@ pipeline{
             }   
         }
         stage('code-deploy'){
-            when {
+          when {
                 branch 'develop'
             }
             steps{
