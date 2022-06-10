@@ -23,7 +23,6 @@ pipeline{
             }
         }
         stage('parallel-job2'){
-            when
             parallel{
                stage('disk-free'){
                     steps{
