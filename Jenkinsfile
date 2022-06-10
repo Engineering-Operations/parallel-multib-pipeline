@@ -10,6 +10,7 @@ pipeline{
             when {
                 banch 'develop'
             }
+            }
             parallel{
                 stage('syscheck'){
                     steps{
