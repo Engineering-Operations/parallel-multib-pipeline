@@ -7,9 +7,6 @@ pipeline{
             }
         }
         stage('parallel-job'){
-            when{
-                banch 'develop'
-            }
             parallel{
                 stage('syscheck'){
                     steps{
@@ -48,7 +45,7 @@ pipeline{
             }   
         }
         stage('code-deploy'){
-            when {
+            when{
                 branch 'develop'
             }
             steps{
