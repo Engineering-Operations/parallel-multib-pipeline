@@ -7,6 +7,9 @@ pipeline{
             }
         }
         stage('parallel-job'){
+            when{
+                banch 'develop'
+            }
             parallel{
                 stage('syscheck'){
                     steps{
@@ -23,6 +26,7 @@ pipeline{
             }
         }
         stage('parallel-job2'){
+            when
             parallel{
                stage('disk-free'){
                     steps{
@@ -45,7 +49,7 @@ pipeline{
             }   
         }
         stage('code-deploy'){
-            when{
+          when {
                 branch 'develop'
             }
             steps{
