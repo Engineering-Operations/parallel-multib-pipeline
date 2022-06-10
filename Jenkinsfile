@@ -7,7 +7,7 @@ pipeline{
             }
         }
         stage('parallel-job'){
-            when{
+            when {
                 banch 'develop'
             }
             parallel{
