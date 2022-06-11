@@ -51,8 +51,8 @@ pipeline{
         }
             steps{
               echo 'This is to deploy the code'
-            }
-        }
-    }
+           }
+       }
+   }
 }
         
