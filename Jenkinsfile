@@ -46,7 +46,7 @@ pipeline{
         }
         stage('code-deploy'){
             when {
-                branch 'deploy'
+                branch 'develop'
             }
             steps{
               echo 'This is to deploy the code'
