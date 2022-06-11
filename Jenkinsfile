@@ -57,6 +57,5 @@ pipeline{
               echo 'This is to deploy the code'
             }
         }
-    }
 }
         
