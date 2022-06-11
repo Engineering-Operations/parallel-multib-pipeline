@@ -52,10 +52,10 @@ pipeline{
             when {
                 branch 'develop'
             }
-        }
             steps{
               echo 'This is to deploy the code'
-            }
-        }
+           }
+       }
+   }
 }
         
